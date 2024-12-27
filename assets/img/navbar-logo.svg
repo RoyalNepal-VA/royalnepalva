@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300">
+  <style>
+    .cls-1 { 
+      fill: #fed136; /* Gold color */
+      font-family: 'Georgia', serif; /* Elegant font */
+      font-weight: bold; /* Bold weight */
+    }
+    .background {
+      fill: #c8102e; /* Red background */
+    }
+  </style>
+  <rect width="100%" height="100%" class="background"/>
+  <text x="100" y="150" font-size="130" class="cls-1">Royal Nepal</text>
+  <text x="100" y="250" font-size="100" class="cls-1">Restaurant</text>
+</svg>

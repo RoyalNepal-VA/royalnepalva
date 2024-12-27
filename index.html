@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Royal Nepal Restaurant</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading" style="color: black;">Welcome To Our Restaurant!</div>
+                <div class="masthead-heading text-uppercase" style="color: black;">Authentic Nepalese Cuisine</div>
+                <a class="btn btn-primary btn-xl text-uppercase" style="color: black;" href="#services">Got to know more about our Restaurant</a>
+            </div>            
+        </header>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <h3 class="section-subheading text-muted">Experience authentic Nepalese cuisine with our comprehensive dining services.</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <a href="https://www.royalnepalrestaurant.com/book-table">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-utensils fa-stack-1x fa-inverse"></i></a>
+                        </span>
+                        <h4 class="my-3">Dine In</h4>
+                        <p class="text-muted">Immerse yourself in the warm ambiance of our traditionally decorated dining space. Enjoy our carefully crafted dishes served with authentic Nepalese hospitality, perfect for both intimate dinners and group celebrations.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <a href="https://www.royalnepalrestaurant.com/menu">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-box fa-stack-1x fa-inverse"></i></a>
+                        </span>
+                        <h4 class="my-3">Take out</h4>
+                        <p class="text-muted">Savor our delicious Nepalese cuisine in the comfort of your home. Our efficient takeout service ensures your favorite dishes are carefully packed to maintain their flavors and temperature until they reach your table.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-glass-martini-alt fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Bar</h4>
+                        <p class="text-muted">Explore our curated selection of beverages, including traditional Nepalese drinks, international wines, and craft cocktails. Our experienced bartenders create the perfect accompaniment to your dining experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .portfolio-item {
+                margin-bottom: 30px;
+                position: relative;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+                overflow: hidden;
+            }
+            
+            .portfolio-item:hover {
+                transform: translateY(-5px);
+            }
+            
+            .portfolio-image-wrapper {
+                position: relative;
+                width: 100%;
+                padding-top: 75%; /* 4:3 Aspect Ratio */
+                overflow: hidden;
+            }
+            
+            .portfolio-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                transition: transform 0.3s ease;
+            }
+            
+            .portfolio-hover {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba(0,0,0,0.7);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+            
+            .portfolio-item:hover .portfolio-hover {
+                opacity: 1;
+            }
+            
+            .portfolio-item:hover .portfolio-image {
+                transform: scale(1.05);
+            }
+            
+            .portfolio-caption {
+                padding: 1.5rem;
+                text-align: center;
+                background: white;
+            }
+            
+            .portfolio-caption-heading {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+            
+            .portfolio-caption-subheading {
+                font-size: 0.9rem;
+                font-style: italic;
+                color: #6c757d;
+            }
+            
+            .section-heading {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                font-weight: 700;
+            }
+            
+            .section-subheading {
+                font-size: 1.1rem;
+                font-style: italic;
+                margin-bottom: 4rem;
+            }
+            .portfolio-modal .modal-dialog {
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+.portfolio-modal .modal-content {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-modal .close-modal:hover {
+    transform: rotate(90deg);
+}
+
+.portfolio-modal .modal-body {
+    padding: 0;
+}
+
+.portfolio-modal .modal-image-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.portfolio-modal .modal-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.portfolio-modal .featured-highlights {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.portfolio-modal .list-inline li {
+    padding: 0.5rem 0;
+}
+
+.portfolio-modal .btn-primary {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-modal .btn-primary:hover {
+    transform: translateY(-2px);
+}
+            </style>
+        <!-- <Awards>     -->
+            <section class="page-section bg-light" id="portfolio">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2 class="section-heading text-uppercase">Awards & Recognition</h2>
+                        <h3 class="section-subheading text-muted">Our journey of excellence since 2017</h3>
+                    </div>
+                    <div class="row g-4">
+                        <!-- Washington Post 2017 Double Feature -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                    <div class="portfolio-image-wrapper">
+                                        <img class="portfolio-image" src="assets/img/portfolio/1.jpeg" alt="Washington Post 2017" />
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                                <i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading">Washington Post Feature</div>
+                                        <div class="portfolio-caption-subheading">December 2017</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+             
+                        <!-- Washington Post 2018 Review -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                    <div class="portfolio-image-wrapper">
+                                        <img class="portfolio-image" src="assets/img/portfolio/2.jpeg" alt="Washington Post 2018" />
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                                <i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading">Washington Post Review</div>
+                                        <div class="portfolio-caption-subheading">May 2018</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+             
+                        <!-- Alexandria Gazette Feature -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                    <div class="portfolio-image-wrapper">
+                                        <img class="portfolio-image" src="assets/img/portfolio/3.jpeg" alt="Alexandria Gazette" />
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                                <i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading">Alexandria Gazette Profile</div>
+                                        <div class="portfolio-caption-subheading">March 2018</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+             
+                        <!-- Northern Virginia Top 50 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                    <div class="portfolio-image-wrapper">
+                                        <img class="portfolio-image" src="assets/img/portfolio/6.jpeg" alt="Top 50 Restaurants" />
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                                <i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading">NoVA's Top 50 Restaurants</div>
+                                        <div class="portfolio-caption-subheading">November 2018</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+             
+                        <!-- Washingtonian Best 2019 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                    <div class="portfolio-image-wrapper">
+                                        <img class="portfolio-image" src="assets/img/portfolio/9.jpeg" alt="Washingtonian Best 2019" />
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                                <i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading">Washingtonian Best</div>
+                                        <div class="portfolio-caption-subheading">Cheap Eats 2019</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+             
+                        <!-- Best Curry in Virginia -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                    <div class="portfolio-image-wrapper">
+                                        <img class="portfolio-image" src="assets/img/portfolio/10.jpeg" alt="Best Curry Award" />
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                                <i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading">Best Curry in Virginia</div>
+                                        <div class="portfolio-caption-subheading">Yelp Recognition 2022</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+             
+                        <!-- Washingtonian 100 Best -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal7">
+                                    <div class="portfolio-image-wrapper">
+                                        <img class="portfolio-image" src="assets/img/portfolio/8.jpeg" alt="100 Best Restaurants" />
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                                <i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading">100 Very Best Restaurants</div>
+                                        <div class="portfolio-caption-subheading">Washingtonian 2019</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+             
+                        <!-- People Love Us on Yelp 2023 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal8">
+                                    <div class="portfolio-image-wrapper">
+                                        <img class="portfolio-image" src="assets/img/portfolio/11.jpeg" alt="Yelp Recognition" />
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                                <i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading">People Love Us on Yelp</div>
+                                        <div class="portfolio-caption-subheading">Community Recognition 2023</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+             
+                        <!-- Wall of Fame -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal9">
+                                    <div class="portfolio-image-wrapper">
+                                        <img class="portfolio-image" src="assets/img/portfolio/12.jpeg" alt="Wall of Fame" />
+                                        <div class="portfolio-hover">
+                                            <div class="portfolio-hover-content">
+                                                <i class="fas fa-plus fa-3x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-caption">
+                                        <div class="portfolio-caption-heading">Wall of Excellence</div>
+                                        <div class="portfolio-caption-subheading">Our Journey Since 2017</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </section>
+        
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Our Journey</h2>
+                    <h3 class="section-subheading text-muted">From our humble beginnings to becoming one of Washington's most celebrated Nepalese restaurants.</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.png" alt="Restaurant Opening" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>June 2017</h4>
+                                <h4 class="subheading">A Dream Takes Flight</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Opened our doors in the heart of Washington, bringing authentic Nepalese flavors and traditional family recipes to the community. Within months, we gained a loyal following for our commitment to authentic cuisine and warm hospitality.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpeg" alt="First Press Coverage" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>March 2018</h4>
+                                <h4 class="subheading">First Washington Post Recognition</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Featured in The Washington Post's "Hidden Gems" section, our traditional momos and curry dishes received high praise. This recognition brought new waves of food enthusiasts eager to experience our authentic Nepalese cuisine.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="Expansion" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>September 2019</h4>
+                                <h4 class="subheading">Growth and Recognition</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Expanded our dining space and launched our specialty bar program. Received our second Washington Post feature highlighting our innovative Nepalese-inspired cocktails and achieved a milestone of 1000+ positive reviews with a 4.7/5 rating.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="Community Engagement" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2020-2021</h4>
+                                <h4 class="subheading">Resilience and Community</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Successfully adapted to challenging times by enhancing our takeout services and launching community support initiatives. Provided over 5,000 meals to frontline workers and maintained our high service standards, earning our third Washington Post feature for community engagement.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/5.jpg" alt="Current Success" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2022-Present</h4>
+                                <h4 class="subheading">Celebrating Excellence</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Achieved a remarkable milestone of 2000+ reviews maintaining our 4.7/5 rating. Recognized as one of DC's top ethnic restaurants, we continue to serve our community with authentic Nepalese cuisine while innovating our menu and guest experience.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Be Part
+                                <br />
+                                Of Our
+                                <br />
+                                Story!
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Team-->
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Leadership Team</h2>
+                    <h3 class="section-subheading text-muted">The visionaries behind Royal Nepal's culinary excellence.</h3>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpeg" alt="..." />
+                            <h4>Subash Rai</h4>
+                            <p class="text-muted">Founder & Executive Chef</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Subash Rai Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Subash Rai Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Subash Rai LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpeg" alt="..." />
+                            <h4>Raju</h4>
+                            <p class="text-muted">Managing Partner & Operations Director</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Raju Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Raju Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Raju LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <p class="large text-muted">With over two decades of combined culinary expertise, our leadership team brings together traditional Nepalese cooking techniques and modern dining innovations. Their commitment to authenticity and excellence has established Royal Nepal as a premier destination for Nepalese cuisine in Washington.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Clients-->
+        
+        <div class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Featured Dishes</h2>
+                    <h3 class="section-subheading text-muted">A visual journey through our signature Nepalese delicacies</h3>
+                </div>
+                <div class="marquee-wrapper">
+                    <div class="marquee">
+                        
+                            <div class="dish-item">
+                                <img src="assets/img/logos/1.jpg" alt="Dish 1">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/2.jpg" alt="Dish 2">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/3.jpg" alt="Dish 3">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/4.png" alt="Dish 4">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/5.jpg" alt="Dish 5">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/6.png" alt="Dish 6">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/7.jpg" alt="Dish 7">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/8.png" alt="Dish 8">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/9.png" alt="Dish 1">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/10.png" alt="Dish 2">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/11.jpg" alt="Dish 3">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/12.png" alt="Dish 4">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/13.png" alt="Dish 5">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/14.jpg" alt="Dish 6">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/15.jpg" alt="Dish 7">
+                            </div>
+                            <div class="dish-item">
+                                <img src="assets/img/logos/16.jpg" alt="Dish 8">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background: white;
+}
+
+.marquee {
+    display: flex;
+    animation: marquee 5s linear infinite;
+    gap: 20px;
+}
+
+.dish-item {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dish-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause animation on hover */
+.marquee:hover {
+    animation-play-state: paused;
+}
+        </style>
+         
+        <!-- Contact-->
+<section class="page-section" id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Get In Touch</h2>
+            <h3 class="section-subheading text-muted">We'd love to hear from you! Make a reservation or send us your feedback.</h3>
+        </div>
+        <div class="row align-items-stretch mb-5">
+            <div class="col-md-6 mb-4">
+                <div class="contact-info p-4 h-100 bg-light rounded">
+                    <h4 class="mb-4">Contact Information</h4>
+                    <div class="mb-4">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        <span>3807 Mount Vernon Ave, Alexandria, VA 22305</span>
+                    </div>
+                    <div class="mb-4">
+                        <i class="fas fa-phone me-2"></i>
+                        <span>
+                            <a href="tel:+15713125130" class="text-dark">+1 (571) 312-5130</a>
+                        </span>
+                    </div>
+                    <div class="mb-4">
+                        <i class="fas fa-envelope me-2"></i>
+                        <span>
+                            <a href="mailto:royalnepalva@gmail.com" class="text-dark">royalnepalva@gmail.com</a>
+                        </span>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="mb-3">Hours of Operation</h5>
+                        <p class="mb-1">Monday - Sunday: 12:00 PM - 9:00 PM</p>
+                        <p>We are off only July-4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form id="contactForm">
+                    <div class="form-group mb-3">
+                        <input class="form-control" id="name" type="text" placeholder="Your Name *" required />
+                    </div>
+                    <div class="form-group mb-3">
+                        <input class="form-control" id="email" type="email" placeholder="Your Email *" required />
+                    </div>
+                    <div class="form-group mb-3">
+                        <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required />
+                    </div>
+                    <div class="form-group mb-3">
+                        <select class="form-control" id="inquiryType" required>
+                            <option value="" disabled selected>Type of Inquiry *</option>
+                            <option value="reservation">Make a Reservation</option>
+                            <option value="catering">Catering Inquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <textarea class="form-control" id="message" placeholder="Your Message *" style="height: 150px" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer-->
+<footer class="footer py-4 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-lg-start mb-4 mb-lg-0">
+                <img src="assets/logo.png" alt="Royal Nepal Logo" style="height: 60px;" class="mb-3">
+                <p class="small text-muted mb-0">Experience authentic Nepalese cuisine in the heart of Alexandria, VA.</p>
+            </div>
+            <div class="col-lg-4 text-lg-center mb-4 mb-lg-0">
+                <h5 class="text-uppercase mb-3">Follow Us</h5>
+                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Yelp">
+                    <i class="fab fa-yelp"></i>
+                </a>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <div class="mb-2">
+                    <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                    <a class="link-dark text-decoration-none me-3" href="#!">Terms of Use</a>
+                </div>
+                <div class="text-muted">
+                    &copy; 2024 Royal Nepal Restaurant. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+.contact-info {
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.btn-social {
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.btn-social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.footer {
+    border-top: 1px solid #e0e0e0;
+}
+</style>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+         
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Washington Post Double Feature</h2>
+                                    <p class="item-intro text-muted">December 2017 - A Milestone Achievement</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpeg" alt="Washington Post Articles 2017" />
+                                    <p class="mb-4">Royal Nepal Restaurant achieved remarkable recognition in The Washington Post with two distinguished features in December 2017: "The $20 Diner's Favorite Cheap Eats of 2017" and "Where to eat, drink and hear live music on Christmas Day."</p>
+                                    
+                                    <p class="mb-4">These articles highlighted our commitment to:</p>
+                                    <ul class="list-inline text-muted mb-4">
+                                        <li>✦ Authentic Nepalese cuisine at accessible prices</li>
+                                        <li>✦ High-quality ingredients and traditional preparation methods</li>
+                                        <li>✦ Creating a welcoming atmosphere during the holidays</li>
+                                        <li>✦ Maintaining exceptional service standards</li>
+                                    </ul>
+        
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>Featured In:</strong>
+                                            The Washington Post
+                                        </li>
+                                        <li>
+                                            <strong>Date:</strong>
+                                            December 25, 2017
+                                        </li>
+                                        <li>
+                                            <strong>Location:</strong>
+                                            3807 Mount Vernon Ave., Alexandria
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <!-- Modal for Washington Post Feature Article -->
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">Washington Post Feature</h2>
+                            <p class="item-intro text-muted">"Nepali cuisine gets the royal treatment"</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpeg" alt="Washington Post Article" />
+                            <p class="mb-4">A comprehensive feature by Tim Carman highlighting Royal Nepal's authentic approach to Nepalese cuisine, showcasing our signature dishes including our celebrated sel roti and lamb chops.</p>
+                            
+                            <div class="featured-highlights mb-4">
+                                <h4>Article Highlights:</h4>
+                                <ul class="list-inline text-muted">
+                                    <li>✦ Innovative interpretation of traditional dishes</li>
+                                    <li>✦ Unique presentation of sel roti with fermented carrot</li>
+                                    <li>✦ Expertly prepared lamb chops on pink salt slabs</li>
+                                    <li>✦ Price accessibility: $6-$12 appetizers, $14-$22 entrées</li>
+                                </ul>
+                            </div>
+
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Publication:</strong>
+                                    The Washington Post
+                                </li>
+                                <li>
+                                    <strong>Critic:</strong>
+                                    Tim Carman
+                                </li>
+                                <li>
+                                    <strong>Featured Dishes:</strong>
+                                    Sel Roti, Lamb Chops
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Alexandria Gazette Feature -->
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">Alexandria Gazette Packet Feature</h2>
+                            <p class="item-intro text-muted">"Meet Chef Subash Rai of Royal Nepal Restaurant"</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpeg" alt="Alexandria Gazette Article" />
+                            <p class="mb-4">An in-depth profile showcasing Chef Subash Rai's culinary expertise and the authentic cooking processes behind Royal Nepal's signature dishes. The article provides readers with a behind-the-scenes look at our kitchen operations.</p>
+
+                            <div class="chef-highlights mb-4">
+                                <h4>Profile Highlights:</h4>
+                                <ul class="list-inline text-muted">
+                                    <li>✦ Chef's journey and culinary background</li>
+                                    <li>✦ Detailed cooking techniques and processes</li>
+                                    <li>✦ Signature dish preparations</li>
+                                    <li>✦ Kitchen operations and quality control</li>
+                                </ul>
+                            </div>
+
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Publication:</strong>
+                                    Alexandria Gazette Packet
+                                </li>
+                                <li>
+                                    <strong>Date:</strong>
+                                    March 8, 2018
+                                </li>
+                                <li>
+                                    <strong>Section:</strong>
+                                    Entertainment & Wellbeing
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Portfolio item 4 modal popup-->
+        <!-- Modal for May 2018 Washington Post Feature -->
+<div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">Washington Post Spotlight</h2>
+                            <p class="item-intro text-muted">"At Royal Nepal, meat and momos get their due" - May 2018</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/to/4.jpeg" alt="Washington Post Review" />
+                            
+                            <p class="mb-4">A detailed review by Tom Sietsema highlighting our signature dishes and unique dining atmosphere, earning a prestigious "Good" rating from the renowned critic.</p>
+
+                            <div class="review-highlights mb-4">
+                                <h4>Review Highlights:</h4>
+                                <ul class="list-inline text-muted">
+                                    <li>✦ Celebrated momos with goat/yak filling</li>
+                                    <li>✦ Distinctive wild boar curry preparation</li>
+                                    <li>✦ House-made pickles and accompaniments</li>
+                                    <li>✦ Comfortable 70-decibel dining atmosphere</li>
+                                </ul>
+                            </div>
+
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Critic:</strong>
+                                    Tom Sietsema
+                                </li>
+                                <li>
+                                    <strong>Rating:</strong>
+                                    Good (★★★)
+                                </li>
+                                <li>
+                                    <strong>Date:</strong>
+                                    May 3, 2018
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for October 2018 Top 10 Feature -->
+<div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">D.C.'s Top 10 Best Bargain Restaurants</h2>
+                            <p class="item-intro text-muted">The Washington Post - October 2018</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/to/5.jpeg" alt="Top 10 Feature" />
+
+                            <p class="mb-4">Selected as one of the 10 best bargain restaurants in the D.C. suburbs, highlighting our commitment to farm-to-table Nepalese cuisine and exceptional value.</p>
+
+                            <div class="recognition-highlights mb-4">
+                                <h4>Recognition Highlights:</h4>
+                                <ul class="list-inline text-muted">
+                                    <li>✦ Region's first farm-to-table Nepalese restaurant</li>
+                                    <li>✦ Signature buffalo meat momos</li>
+                                    <li>✦ House-made yogurt marinated lamb chops</li>
+                                    <li>✦ Owners' extensive fine dining experience</li>
+                                </ul>
+                            </div>
+
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Feature By:</strong>
+                                    Tim Carman
+                                </li>
+                                <li>
+                                    <strong>Date:</strong>
+                                    October 10, 2018
+                                </li>
+                                <li>
+                                    <strong>Category:</strong>
+                                    Best Bargain Restaurants
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal for Northern Virginia Top 50 Recognition -->
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">Northern Virginia's 50 Best Restaurants</h2>
+                            <p class="item-intro text-muted">November 2018</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpeg" alt="Top 50 Recognition" />
+
+                            <p class="mb-4">Royal Nepal was honored to be selected as one of Northern Virginia's 50 Best Restaurants, recognizing our commitment to authentic Nepalese cuisine and dining excellence.</p>
+
+                            <div class="recognition-highlights mb-4">
+                                <h4>Recognition Highlights:</h4>
+                                <ul class="list-inline text-muted">
+                                    <li>✦ Featured among the region's finest dining establishments</li>
+                                    <li>✦ Recognized for authentic Nepalese recipes and presentations</li>
+                                    <li>✦ Praised for innovative menu offerings</li>
+                                    <li>✦ Highlighted for exceptional service standards</li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Washingtonian Recognition -->
+<div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">Multiple Washingtonian Honors</h2>
+                            <p class="item-intro text-muted">December 2018 - February 2019</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/8.jpeg" alt="Washingtonian Features" />
+
+                            <p class="mb-4">Royal Nepal received multiple recognitions from the Washingtonian, including selection for the "100 Very Best Restaurants 2019" list and feature in "Super Food: The 40 Best Things We Ate in 2018."</p>
+
+                            <div class="achievement-highlights mb-4">
+                                <h4>Recognition Highlights:</h4>
+                                <ul class="list-inline text-muted">
+                                    <li>✦ Featured in Washingtonian's prestigious annual restaurant guide</li>
+                                    <li>✦ Recognized for signature yak momos</li>
+                                    <li>✦ Praised for innovative Nepalese cuisine</li>
+                                    <li>✦ Highlighted for exceptional value and dining experience</li>
+                                </ul>
+                            </div>
+
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Publications:</strong>
+                                    December 2018 & February 2019 Issues
+                                </li>
+                                <li>
+                                    <strong>Recognition:</strong>
+                                    100 Very Best Restaurants List
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal for Washingtonian Best 2019 Award -->
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">Washingtonian Best 2019</h2>
+                            <p class="item-intro text-muted">Outstanding Food, Service, Comfort and Value</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/9.jpeg" alt="Washingtonian Certificate" />
+
+                            <p class="mb-4">Royal Nepal was honored with the prestigious Washingtonian Best 2019 award in the Cheap Eats category, recognizing our commitment to providing exceptional value while maintaining the highest standards of food quality and service.</p>
+
+                            <div class="award-details mb-4">
+                                <h4>Award Recognition:</h4>
+                                <ul class="list-inline text-muted">
+                                    <li>✦ Excellence in Food Quality</li>
+                                    <li>✦ Outstanding Service Standards</li>
+                                    <li>✦ Superior Comfort and Ambiance</li>
+                                    <li>✦ Exceptional Value for Diners</li>
+                                </ul>
+                            </div>
+
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Award:</strong>
+                                    Washingtonian Best 2019 - Cheap Eats
+                                </li>
+                                <li>
+                                    <strong>Presented By:</strong>
+                                    Washingtonian Magazine
+                                </li>
+                                <li>
+                                    <strong>Year:</strong>
+                                    2019
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Best Curry in Virginia 2022 -->
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">Best Curry in Virginia 2022</h2>
+                            <p class="item-intro text-muted">State Winner - Best Curry Award</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/10.jpeg" alt="Best Curry Award" />
+
+                            <p class="mb-4">Royal Nepal achieved statewide recognition by winning the prestigious Best Curry in Virginia award for 2022, showcasing our dedication to authentic Nepalese curry preparation and flavors.</p>
+
+                            <div class="achievement-details mb-4">
+                                <h4>Award Significance:</h4>
+                                <ul class="list-inline text-muted">
+                                    <li>✦ State-level recognition for culinary excellence</li>
+                                    <li>✦ Acknowledgment of authentic curry preparation</li>
+                                    <li>✦ Recognition among all restaurants in Virginia</li>
+                                    <li>✦ Validation of traditional recipes and techniques</li>
+                                </ul>
+                            </div>
+
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Award:</strong>
+                                    Best Curry in Virginia
+                                </li>
+                                <li>
+                                    <strong>Year:</strong>
+                                    2022
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal for Yelp "People Love Us" 2023 Recognition -->
+<div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">People Love Us on Yelp 2023</h2>
+                            <p class="item-intro text-muted">Community Recognition Award</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/11.jpeg" alt="Yelp Recognition" />
+
+                            <p class="mb-4">Royal Nepal has been recognized as a beloved business by the Yelp community, reflecting our consistent dedication to customer satisfaction and exceptional dining experiences.</p>
+
+                            <div class="recognition-details mb-4">
+                                <h4>Community Recognition:</h4>
+                                <ul class="list-inline text-muted">
+                                    <li>✦ Customer-voted recognition</li>
+                                    <li>✦ Exceptional service acknowledgment</li>
+                                    <li>✦ Consistent positive feedback</li>
+                                    <li>✦ Community appreciation award</li>
+                                </ul>
+                            </div>
+
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>Recognition:</strong>
+                                    People Love Us on Yelp
+                                </li>
+                                <li>
+                                    <strong>Date:</strong>
+                                    November 1, 2023
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Wall of Achievements -->
+<div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">Our Journey of Excellence</h2>
+                            <p class="item-intro text-muted">A Chronicle of Recognition and Achievement</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/12.jpeg" alt="Wall of Achievements" />
+
+                            <p class="mb-4">Since our establishment in 2017, Royal Nepal has been honored with numerous prestigious recognitions, reflecting our unwavering commitment to culinary excellence and exceptional service.</p>
+
+                            <div class="awards-timeline mb-4">
+                                <h4>Key Achievements:</h4>
+                                <ul class="list-inline text-muted">
+                                    <li>✦ Multiple Washington Post Features (2017-2023)</li>
+                                    <li>✦ Washingtonian Magazine's 100 Very Best Restaurants</li>
+                                    <li>✦ Northern Virginia's 50 Best Restaurants</li>
+                                    <li>✦ Best Curry in Virginia 2022</li>
+                                    <li>✦ Washingtonian Best 2019 - Cheap Eats</li>
+                                    <li>✦ Alexandria Gazette Recognition</li>
+                                    <li>✦ People Love Us on Yelp 2023</li>
+                                </ul>
+                            </div>
+
+                            <div class="text-center">
+                                <p class="mb-4">Each award and recognition represents our dedication to providing authentic Nepalese cuisine and outstanding dining experiences to our valued guests.</p>
+                            </div>
+                            
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
